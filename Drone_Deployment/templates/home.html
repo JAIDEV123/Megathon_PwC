@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drone Location</title>
+	<meta charset="UTF-8">
+	 <link rel="stylesheet" href="{{ url_for('static', filename='trial.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Heebo|Roboto:900|PT+Serif:700" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+	<h1>Drone Location</h1>
+
+		<div id="inputs">
+		<div id="wrapper">
+			<div class="box">
+				<h2>Input Rain Level</h2>
+				<form id="myForm" action="{{request.path}}" method="post"> 
+     
+					{%for item in lis_final%}
+					<div class="row">
+						<div class="col-md-3">
+							<h3 class="ghost">{{item.place}}</h3>
+							<h4>{{item.cood}}</h3>
+							<h4>Traffic Index: {{item.traffic}}</h3>
+							<input type="number" name = "a{{ loop.index }}" id="a{{ loop.index }}" placeholder="Rain (on a scale of 100)"><br><br>
+						</div>
+					</div>
+                    {%endfor%}
+					<input type="submit" id="butt" value="Submit">
+				</form>
+			</div>
+		</div>
+		<!-- :) -->
+	</div>
+</body>
+</html>
