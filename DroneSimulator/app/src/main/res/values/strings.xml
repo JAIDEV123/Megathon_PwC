@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Drone Simulator</string>
+    <string name="camera">camera</string>
+    <string name="submit">submit</string>
+</resources>
