@@ -7,6 +7,7 @@ body
 {
 	font-family: 'PT Serif', serif;
 	text-align: center;
+	background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%) !important;
 }
 
 h1
@@ -182,6 +183,13 @@ h3,h4
 	background-color: #5DBCD2;
 	color: white;
 	margin: 0 15px 30px 15px;
+}
+
+.ghost {
+	background: none !important;
+	border: 2px solid #5DBCD2 !important;
+	color: #5DBCD2 !important;
+	font-weight: bold !important;
 }
 
 #butt
